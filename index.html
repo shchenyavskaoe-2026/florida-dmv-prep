@@ -119,7 +119,14 @@
             font-size: 1.25rem;
             color: var(--muted);
             max-width: 500px;
-            margin: 0 auto 32px;
+            margin: 0 auto 40px;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
         }
 
         .language-badge {
@@ -127,11 +134,10 @@
             align-items: center;
             gap: 8px;
             background: var(--card);
-            padding: 8px 16px;
-            border-radius: 20px;
+            padding: 10px 20px;
+            border-radius: 25px;
             font-size: 0.95rem;
             color: var(--text);
-            margin-bottom: 32px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.08);
         }
 
@@ -297,12 +303,11 @@
                 <h1>Pass Your Florida DMV Exam <span>on the First Try</span></h1>
                 <p>Free practice tests and study materials for the Class E knowledge exam. No ads, no subscriptions.</p>
 
-                <div class="language-badge">
-                    <span>Available in English & Russian</span>
-                </div>
-
-                <div id="download" class="download-btn">
-                    <a href="https://apps.apple.com/app/florida-dmv-prep">
+                <div class="hero-actions" id="download">
+                    <div class="language-badge">
+                        <span>Available in English & Russian</span>
+                    </div>
+                    <a href="https://apps.apple.com/app/florida-dmv-prep" class="download-btn">
                         <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
                     </a>
                 </div>
