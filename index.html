@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Florida DMV Prep - Pass Your Class E Exam</title>
+    <meta name="description" content="Free Florida DMV practice tests with English/Russian support. 451 questions, realistic exam simulation, and study materials. Pass your Class E knowledge exam!">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #A4133C;
+            --accent: #D4920A;
+            --bg: #FDF8F8;
+            --text: #1F2A44;
+            --muted: #64748B;
+            --card: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Nunito', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        header {
+            padding: 20px 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(253, 248, 248, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo img {
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+        }
+
+        .logo-text {
+            font-weight: 800;
+            font-size: 1.25rem;
+            color: var(--primary);
+        }
+
+        .header-cta {
+            background: var(--primary);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .header-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(164, 19, 60, 0.3);
+        }
+
+        /* Hero */
+        .hero {
+            padding: 120px 0 60px;
+            text-align: center;
+        }
+
+        .hero-image {
+            width: 100%;
+            max-width: 800px;
+            border-radius: 20px;
+            margin-bottom: 40px;
+            box-shadow: 0 20px 60px rgba(164, 19, 60, 0.15);
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+
+        .hero h1 span {
+            color: var(--accent);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--muted);
+            max-width: 500px;
+            margin: 0 auto 32px;
+        }
+
+        .language-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--card);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.95rem;
+            color: var(--text);
+            margin-bottom: 32px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .download-btn {
+            display: inline-block;
+        }
+
+        .download-btn img {
+            height: 54px;
+        }
+
+        /* Features */
+        .features {
+            padding: 60px 0;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 24px;
+        }
+
+        .feature {
+            background: var(--card);
+            padding: 28px 24px;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+        }
+
+        .feature h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--primary);
+        }
+
+        .feature p {
+            font-size: 0.95rem;
+            color: var(--muted);
+        }
+
+        /* Stats */
+        .stats {
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .stats-row {
+            display: flex;
+            justify-content: center;
+            gap: 48px;
+            flex-wrap: wrap;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--accent);
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--muted);
+            font-weight: 600;
+        }
+
+        /* CTA Section */
+        .cta {
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .cta-box {
+            background: linear-gradient(135deg, var(--primary), #C71C4D);
+            padding: 48px 32px;
+            border-radius: 24px;
+            color: white;
+        }
+
+        .cta-box h2 {
+            font-size: 1.75rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+
+        .cta-box p {
+            opacity: 0.9;
+            margin-bottom: 24px;
+        }
+
+        .cta-box .download-btn img {
+            height: 50px;
+            filter: brightness(0) invert(1);
+            opacity: 0.95;
+        }
+
+        /* Footer */
+        footer {
+            padding: 32px 0;
+            text-align: center;
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 640px) {
+            .hero h1 {
+                font-size: 1.75rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .header-cta {
+                padding: 8px 16px;
+                font-size: 0.85rem;
+            }
+
+            .logo-text {
+                display: none;
+            }
+
+            .stats-row {
+                gap: 32px;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <img src="assets/app-icon.png" alt="Florida DMV Prep">
+                <span class="logo-text">Florida DMV Prep</span>
+            </div>
+            <a href="#download" class="header-cta">Download Free</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <img src="assets/hero.webp" alt="Get ready to pass your Florida DMV exam!" class="hero-image">
+
+                <h1>Pass Your Florida DMV Exam <span>on the First Try</span></h1>
+                <p>Free practice tests and study materials for the Class E knowledge exam. No ads, no subscriptions.</p>
+
+                <div class="language-badge">
+                    <span>Available in English & Russian</span>
+                </div>
+
+                <div id="download" class="download-btn">
+                    <a href="https://apps.apple.com/app/florida-dmv-prep">
+                        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <div class="features-grid">
+                    <div class="feature">
+                        <div class="feature-icon">📝</div>
+                        <h3>451 Practice Questions</h3>
+                        <p>Comprehensive question bank covering all exam topics</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">🎯</div>
+                        <h3>Realistic Exam Mode</h3>
+                        <p>50 questions, 80% to pass — just like the real test</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">🪧</div>
+                        <h3>Road Sign Flashcards</h3>
+                        <p>Learn all Florida road signs with spaced repetition</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">📚</div>
+                        <h3>Study Chapters</h3>
+                        <p>18 chapters covering everything you need to know</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats">
+            <div class="container">
+                <div class="stats-row">
+                    <div class="stat">
+                        <div class="stat-number">451</div>
+                        <div class="stat-label">Questions</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">18</div>
+                        <div class="stat-label">Study Chapters</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Free</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="container">
+                <div class="cta-box">
+                    <h2>Ready to Get Your License?</h2>
+                    <p>Download now and start practicing today</p>
+                    <div class="download-btn">
+                        <a href="https://apps.apple.com/app/florida-dmv-prep">
+                            <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Florida DMV Prep &middot; <a href="privacy.html">Privacy Policy</a></p>
+        </div>
+    </footer>
+</body>
+</html>
