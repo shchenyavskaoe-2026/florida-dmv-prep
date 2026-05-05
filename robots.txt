@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shchenyavskaoe-2026.github.io/florida-dmv-prep/sitemap.xml
